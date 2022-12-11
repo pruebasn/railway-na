@@ -1,6 +1,6 @@
 @extends ('PagPlantilla')
 
-@section('Titulo del Monchito')
+@section('Titulo')
     <h1 class="display-4">PAGINA DE LISTA </h1>
 @endsection
 
@@ -10,8 +10,8 @@
     <p>CODIGO:               {{ $xDetAlumnos->CodEst}}</p>
     <p>APELLIDOS Y NOMBRES:  {{ $xDetAlumnos->ApeEst}}, {{ $xDetAlumnos->NomEst}}</p>
     <p>FECHA DE NACIMIENTO:  {{ $xDetAlumnos->fnaEst}}</p>
-    <p>TURNO:                {{ $xDetAlumnos->TurEst}}</p>
-    <p>SEMESTRE:             {{ $xDetAlumnos->SemEst}}</p>
-    <p>ESTADO DE MATRICULA:  {{ $xDetAlumnos->EstEst}}</p>
+    <p>TURNO:                {{ $xDetAlumnos->TurMat}}</p>
+    <p>SEMESTRE:             {{ $xDetAlumnos->SemMat}}</p>
+    <p>ESTADO DE MATRICULA:  {{ $xDetAlumnos->EstMat}}</p>
 @endsection
     

@@ -14,7 +14,7 @@
     </div>
 
     <div class="container my-5">
-        @yield('Titulo del mochito')
+        @yield('Titulo')
     </div>
 
     <div class="container my-5">
