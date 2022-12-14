@@ -66,7 +66,12 @@ class PagesController extends Controller
         //return view('pagLista', compact('xAlumnos'));        //Pasar a pagLista
         return back()->with('msj','Se registro con éxito...'); //Regresar con msj
     }
+    public function fnEstDetalle($id){
 
+        $xDetAlumnos = Estudiante::findOrFail($id);
+        return view('Estudiante.pagDetalle', compact('xDetAlumnos'));
+    }
+    
     public function fnEliminar($id){
         $deleteAlumno = Estudiante::findOrFail($id);
         $deleteAlumno->delete();
