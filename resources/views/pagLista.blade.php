@@ -11,7 +11,6 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
         </div>
     @endif
-    
     <form action="{{ route('Estudiante.xRegistrar') }}" method="post" class="d-grid gap-2">
         @csrf
 
@@ -33,8 +32,6 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
-    
-
         <input type="text" name="CodEst" placeholder="Código" value="{{ old('CodEst')}}" class="form-control mb-1">
         <input type="text" name="NomEst" placeholder="Nombres" value="{{ old('NomEst')}}" class="form-control mb-1">
         <input type="text" name="ApeEst" placeholder="Apellidos" value="{{ old('ApeEst')}}" class="form-control mb-1">
@@ -58,10 +55,7 @@
         </select>
         <button class="btn btn-success" type="submit">Agregar</button>
     </form>
-
-   
-    <div class="btn btn-dark d-grid fs-5 mb-2 bt-2">Lista de seguimiento...</div>
-    
+    <div class="btn btn-dark d-grid fs-5 mb-2 bt-2">Lista de seguimiento...</div>  
     <table class="table">
         <thead class="table-secondary">
             <tr>
@@ -71,7 +65,6 @@
                 <th scope="col">Editar</th>
             </tr>
         </thead>
-
         <tbody>
             @foreach($xAlumnos as $item)
             <tr>
@@ -98,14 +91,11 @@
             </tr>
             @endforeach
         </tbody>
-
-
         <thead class="table-secondary">
             <tr>
                 <th colspan="4">.</th>
             </tr>
         </thead>
-
     </table>
 @endsection
    
