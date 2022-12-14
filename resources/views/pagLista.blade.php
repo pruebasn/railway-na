@@ -1,4 +1,4 @@
-@extends('PagPlantilla') 
+@extends('pagPlantilla') 
 
 @section('titulo')
     <h1 class="display-4">Página de lista </h1>
@@ -11,6 +11,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
         </div>
     @endif
+
     <form action="{{ route('Estudiante.xRegistrar') }}" method="post" class="d-grid gap-2">
         @csrf
 
@@ -32,6 +33,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
+
         <input type="text" name="CodEst" placeholder="Código" value="{{ old('CodEst')}}" class="form-control mb-1">
         <input type="text" name="NomEst" placeholder="Nombres" value="{{ old('NomEst')}}" class="form-control mb-1">
         <input type="text" name="ApeEst" placeholder="Apellidos" value="{{ old('ApeEst')}}" class="form-control mb-1">
@@ -44,9 +46,11 @@
         </select>
         <select name="SemMat" class="form-control mb-1">
             <option value="">Seleccione...</option>
+
             @for($i=1; $i < 7; $i++)
                 <option value="{{$i}}">Semestre {{$i}}</option>
             @endfor
+
         </select>
         <select name="EstMat" class="form-control mb-1">
             <option value="">Seleccione...</option>
@@ -66,6 +70,7 @@
             </tr>
         </thead>
         <tbody>
+
             @foreach($xAlumnos as $item)
             <tr>
                 <th scope="row">{{ $item->id }}</th>
@@ -90,6 +95,7 @@
                 </td>
             </tr>
             @endforeach
+            
         </tbody>
         <thead class="table-secondary">
             <tr>
