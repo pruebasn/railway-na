@@ -1,4 +1,4 @@
-@extends ('pagPlantilla')
+@extends ('PagPlantilla')
 
 @section('Titulo')
     <h1 class="display-4">PAGINA DE LISTA </h1>
